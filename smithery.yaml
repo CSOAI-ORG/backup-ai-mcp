@@ -1,0 +1,10 @@
+name: backup-ai-mcp
+description: "MEOK AI Labs — backup-ai-mcp"
+vendor: MEOK AI Labs
+homepage: https://meok.ai
+repository: https://github.com/CSOAI-ORG/backup-ai-mcp
+license: MIT
+categories: [DevOps, Data Management]
+tags: [backup, disaster-recovery, data-protection, file-backup, snapshot]
+runtime: python
+entrypoint: server.py
