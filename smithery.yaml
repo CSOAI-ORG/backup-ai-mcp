@@ -1,10 +1,34 @@
 name: backup-ai-mcp
-description: "MEOK AI Labs — backup-ai-mcp"
-vendor: MEOK AI Labs
-homepage: https://meok.ai
-repository: https://github.com/CSOAI-ORG/backup-ai-mcp
-license: MIT
-categories: [DevOps, Data Management]
-tags: [backup, disaster-recovery, data-protection, file-backup, snapshot]
-runtime: python
-entrypoint: server.py
+description: "backup-ai-mcp \u2014 Built by [MEOK AI Labs](https://meok.ai)"
+version: 1.0.0
+tools:
+- name: create_backup_plan
+  description: MEOK AI Labs tool.
+  parameters:
+  - name: source_path
+    type: string
+    required: true
+  - name: destination
+    type: string
+    required: false
+  - name: frequency
+    type: string
+    required: false
+- name: verify_backup
+  description: MEOK AI Labs tool.
+  parameters:
+  - name: backup_path
+    type: string
+    required: true
+- name: list_backups
+  description: MEOK AI Labs tool.
+  parameters:
+  - name: directory
+    type: string
+    required: false
+- name: calculate_backup_size
+  description: MEOK AI Labs tool.
+  parameters:
+  - name: source_path
+    type: string
+    required: true

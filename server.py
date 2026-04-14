@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
 """File backup scheduling and verification. — MEOK AI Labs."""
+
+import sys, os
+sys.path.insert(0, os.path.expanduser('~/clawd/meok-labs-engine/shared'))
+from auth_middleware import check_access
+
 import json, os, re, hashlib, math, random, string, time
 from datetime import datetime, timezone
 from typing import Optional
@@ -18,48 +23,64 @@ mcp = FastMCP("backup-ai", instructions="MEOK AI Labs — File backup scheduling
 
 
 @mcp.tool()
-def create_backup_plan(source_path: str, destination: str = 'backup', frequency: str = 'daily') -> str:
+def create_backup_plan(source_path: str, destination: str = 'backup', frequency: str = 'daily', api_key: str = "") -> str:
     """MEOK AI Labs tool."""
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     if err := _rl(): return err
     result = {"tool": "create_backup_plan", "timestamp": datetime.now(timezone.utc).isoformat()}
     # Process input
     local_vars = {k: v for k, v in locals().items() if k not in ('result',)}
     result["input"] = str(local_vars)[:200]
     result["status"] = "processed"
-    return json.dumps(result, indent=2)
+    return result
 
 @mcp.tool()
-def verify_backup(backup_path: str) -> str:
+def verify_backup(backup_path: str, api_key: str = "") -> str:
     """MEOK AI Labs tool."""
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     if err := _rl(): return err
     result = {"tool": "verify_backup", "timestamp": datetime.now(timezone.utc).isoformat()}
     # Process input
     local_vars = {k: v for k, v in locals().items() if k not in ('result',)}
     result["input"] = str(local_vars)[:200]
     result["status"] = "processed"
-    return json.dumps(result, indent=2)
+    return result
 
 @mcp.tool()
-def list_backups(directory: str = 'backup') -> str:
+def list_backups(directory: str = 'backup', api_key: str = "") -> str:
     """MEOK AI Labs tool."""
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     if err := _rl(): return err
     result = {"tool": "list_backups", "timestamp": datetime.now(timezone.utc).isoformat()}
     # Process input
     local_vars = {k: v for k, v in locals().items() if k not in ('result',)}
     result["input"] = str(local_vars)[:200]
     result["status"] = "processed"
-    return json.dumps(result, indent=2)
+    return result
 
 @mcp.tool()
-def calculate_backup_size(source_path: str) -> str:
+def calculate_backup_size(source_path: str, api_key: str = "") -> str:
     """MEOK AI Labs tool."""
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     if err := _rl(): return err
     result = {"tool": "calculate_backup_size", "timestamp": datetime.now(timezone.utc).isoformat()}
     # Process input
     local_vars = {k: v for k, v in locals().items() if k not in ('result',)}
     result["input"] = str(local_vars)[:200]
     result["status"] = "processed"
-    return json.dumps(result, indent=2)
+    return result
 
 
 if __name__ == "__main__":

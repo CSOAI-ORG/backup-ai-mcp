@@ -1,20 +1,71 @@
 {
   "name": "backup-ai-mcp",
-  "description": "MEOK AI Labs \u2014 backup-ai-mcp",
-  "vendor": "MEOK AI Labs",
-  "homepage": "https://meok.ai",
-  "repository": "https://github.com/CSOAI-ORG/backup-ai-mcp",
-  "runtime": "python",
-  "entrypoint": "server.py",
+  "description": "backup-ai-mcp \u2014 Built by [MEOK AI Labs](https://meok.ai)",
+  "version": "1.0.0",
   "tools": [
-    "run"
-  ],
-  "categories": [
-    "DevOps",
-    "Data Management"
-  ],
-  "pricing": {
-    "free": "50 calls/day",
-    "pro": "$9/mo"
-  }
+    {
+      "name": "create_backup_plan",
+      "description": "MEOK AI Labs tool.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "source_path": {
+            "type": "string"
+          },
+          "destination": {
+            "type": "string"
+          },
+          "frequency": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "source_path"
+        ]
+      }
+    },
+    {
+      "name": "verify_backup",
+      "description": "MEOK AI Labs tool.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "backup_path": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "backup_path"
+        ]
+      }
+    },
+    {
+      "name": "list_backups",
+      "description": "MEOK AI Labs tool.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "directory": {
+            "type": "string"
+          }
+        },
+        "required": []
+      }
+    },
+    {
+      "name": "calculate_backup_size",
+      "description": "MEOK AI Labs tool.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "source_path": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "source_path"
+        ]
+      }
+    }
+  ]
 }
