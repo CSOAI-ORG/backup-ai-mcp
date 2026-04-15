@@ -1,0 +1,58 @@
+{
+  "name": "backup-ai",
+  "description": "MEOK AI Labs \u2014 Backup scheduling, verification, retention policies. 3-2-1 rule, SOC2 backup compliance.",
+  "version": "1.0.0",
+  "protocol_version": "2025-11-25",
+  "publisher": {
+    "name": "MEOK AI Labs",
+    "url": "https://meok.ai",
+    "email": "nicholas@meok.ai"
+  },
+  "repository": "https://github.com/CSOAI-ORG/backup-ai-mcp",
+  "license": "MIT",
+  "transport": [
+    "stdio",
+    "streamable-http"
+  ],
+  "authentication": {
+    "type": "api-key",
+    "free_tier": true,
+    "free_limit": "15 calls/day"
+  },
+  "tools": [
+    {
+      "name": "create_backup_plan",
+      "description": "Create a backup plan following 3-2-1 rule (3 copies, 2 media types, 1 offsite)."
+    },
+    {
+      "name": "verify_backup",
+      "description": "Verify backup integrity using hash comparison."
+    },
+    {
+      "name": "list_backups",
+      "description": "List available backups in a directory."
+    },
+    {
+      "name": "calculate_backup_size",
+      "description": "Calculate estimated backup size and time."
+    },
+    {
+      "name": "retention_policy",
+      "description": "Generate retention policy for compliance (SOC2, GDPR, HIPAA)."
+    }
+  ],
+  "categories": [
+    "AI & Machine Learning",
+    "DevOps & Infrastructure",
+    "Security & Compliance"
+  ],
+  "pricing": {
+    "free": {
+      "calls_per_day": 15
+    },
+    "pro": {
+      "price": "$29/month",
+      "url": "https://meok.ai/pricing"
+    }
+  }
+}
