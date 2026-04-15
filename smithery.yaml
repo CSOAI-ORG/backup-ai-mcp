@@ -1,5 +1,6 @@
 name: backup-ai-mcp
-description: "MEOK AI Labs \u2014 File backup scheduling and verification."
+description: Backup Ai automation via MCP. Includes create backup plan, verify backup,
+  list backups. By MEOK AI Labs.
 version: 1.0.0
 tools:
 - name: create_backup_plan

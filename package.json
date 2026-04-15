@@ -1,1 +1,11 @@
-{"name":"backup-ai-mcp","version":"1.0.0","description":"MEOK AI Labs MCP","author":"MEOK AI Labs","license":"MIT","repository":{"type":"git","url":"https://github.com/CSOAI-ORG/backup-ai-mcp"}}
+{
+  "name": "backup-ai-mcp",
+  "version": "1.0.0",
+  "description": "Backup Ai automation via MCP. Includes create backup plan, verify backup, list backups. By MEOK AI Labs.",
+  "author": "MEOK AI Labs",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CSOAI-ORG/backup-ai-mcp"
+  }
+}

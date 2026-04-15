@@ -1,9 +1,30 @@
-# backup-ai-mcp
+# Backup AI MCP Server
 
-backup-ai-mcp — Built by [MEOK AI Labs](https://meok.ai)
+> **By [MEOK AI Labs](https://meok.ai)** — Sovereign AI tools for everyone.
 
-## License
-MIT © MEOK AI Labs
+File backup scheduling, verification, retention policies. 3-2-1 rule, SOC2/GDPR/HIPAA compliance.
+
+## Tools
+
+| Tool | Description |
+|------|-------------|
+| `create_backup_plan` | Create backup plan with 3-2-1 rule |
+| `verify_backup` | Verify backup integrity |
+| `list_backups` | List available backups |
+| `calculate_backup_size` | Estimate backup size and time |
+| `retention_policy` | Generate compliance retention policy |
+
+## Quick Start
+
+```bash
+pip install mcp
+python server.py
+```
+
+## Part of MEOK AI Labs
+
+One of 250+ MCP servers. Browse all at [meok.ai](https://meok.ai)
 
 ---
-**Status: Coming Soon** — Full implementation in progress. Currently available as part of the MEOK Everything Pack (£2,499/mo).
+
+**MEOK AI Labs** | [meok.ai](https://meok.ai) | nicholas@meok.ai
