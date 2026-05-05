@@ -1,63 +1,38 @@
-# Backup AI MCP Server
+<div align="center">
 
-> By [MEOK AI Labs](https://meok.ai) — Backup scheduling, verification, and retention policies with SOC2/GDPR/HIPAA compliance
+[![GitHub stars](https://img.shields.io/github/stars/CSOAI-ORG/backup-ai-mcp)](https://github.com/CSOAI-ORG/backup-ai-mcp/stargazers)
+
+# Backup Ai Mcp
+
+**Immutable audit trails with SHA-256 hash chain verification for compliance certifications**
+
+[![npm version](https://img.shields.io/npm/v/@meok-ai/backup-ai-mcp)](https://www.npmjs.com/package/@meok-ai/backup-ai-mcp)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![MEOK AI Labs](https://img.shields.io/badge/MEOK_AI_Labs-255+_servers-purple)](https://meok.ai)
+
+[Installation](#installation) · [Docs](https://csoai.org) · [Report Bug](https://github.com/CSOAI-ORG/backup-ai-mcp/issues)
+
+</div>
+
+---
 
 ## Installation
 
 ```bash
 pip install backup-ai-mcp
+# or
+npm install -g @meok-ai/backup-ai-mcp
 ```
 
-## Usage
+## Quick Start
 
-```bash
-# Run standalone
-python server.py
+See the project repository for full documentation and examples.
 
-# Or via MCP
-mcp install backup-ai-mcp
-```
+## Enterprise Support
 
-## Tools
-
-### `create_backup_plan`
-Create a backup plan following the 3-2-1 rule (3 copies, 2 media types, 1 offsite).
-
-**Parameters:**
-- `source_path` (str): Path to back up
-- `destination` (str): Destination path (default 'backup')
-- `frequency` (str): Backup frequency (default 'daily')
-- `retention_days` (int): Retention period in days (default 30)
-
-### `verify_backup`
-Verify backup integrity using hash comparison. Checks SOC2 CC7.3 compliance.
-
-**Parameters:**
-- `backup_path` (str): Path to the backup file
-
-### `list_backups`
-List available backups in a directory with sizes and modification dates.
-
-**Parameters:**
-- `directory` (str): Directory to list (default 'backup')
-
-### `calculate_backup_size`
-Calculate estimated backup size, compressed size, and transfer time.
-
-**Parameters:**
-- `source_path` (str): Path to calculate
-
-### `retention_policy`
-Generate retention policy for compliance (SOC2, GDPR, HIPAA, PCI, FINRA).
-
-**Parameters:**
-- `files` (str): File description
-- `compliance_type` (str): Compliance type — 'soc2', 'gdpr', 'hipaa', 'pci', 'finra'
-
-## Authentication
-
-Free tier: 30 calls/day. Upgrade at [meok.ai/pricing](https://meok.ai/pricing) for unlimited access.
+- 📧 nicholas@csoai.org
+- 🌐 [CSOAI.org](https://csoai.org)
 
 ## License
 
-MIT — MEOK AI Labs
+MIT © [CSOAI](https://csoai.org)
