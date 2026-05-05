@@ -4,7 +4,7 @@
 
 # Backup Ai Mcp
 
-**Immutable audit trails with SHA-256 hash chain verification for compliance certifications**
+**Backup scheduling, verification, and retention policies with SOC2/GDPR/HIPAA compliance**
 
 [![npm version](https://img.shields.io/npm/v/@meok-ai/backup-ai-mcp)](https://www.npmjs.com/package/@meok-ai/backup-ai-mcp)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
