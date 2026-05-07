@@ -1,3 +1,5 @@
+[![backup-ai-mcp MCP server](https://glama.ai/mcp/servers/CSOAI-ORG/backup-ai-mcp/badges/card.svg)](https://glama.ai/mcp/servers/CSOAI-ORG/backup-ai-mcp)
+
 <div align="center">
 
 [![GitHub stars](https://img.shields.io/github/stars/CSOAI-ORG/backup-ai-mcp)](https://github.com/CSOAI-ORG/backup-ai-mcp/stargazers)
