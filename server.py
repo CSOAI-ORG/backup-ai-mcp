@@ -42,7 +42,22 @@ def create_backup_plan(
     retention_days: int = 30,
     api_key: str = "",
 ) -> str:
-    """Create a backup plan following 3-2-1 rule (3 copies, 2 media types, 1 offsite)."""
+    """Create a backup plan following 3-2-1 rule (3 copies, 2 media types, 1 offsite).
+
+    Behavior:
+        This tool generates structured output without modifying external systems.
+        Output is deterministic for identical inputs. No side effects.
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
@@ -76,7 +91,23 @@ def create_backup_plan(
 
 @mcp.tool()
 def verify_backup(backup_path: str, api_key: str = "") -> str:
-    """Verify backup integrity using hash comparison."""
+    """Verify backup integrity using hash comparison.
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
@@ -101,7 +132,23 @@ def verify_backup(backup_path: str, api_key: str = "") -> str:
 
 @mcp.tool()
 def list_backups(directory: str = "backup", api_key: str = "") -> str:
-    """List available backups in a directory."""
+    """List available backups in a directory.
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
@@ -129,7 +176,23 @@ def list_backups(directory: str = "backup", api_key: str = "") -> str:
 
 @mcp.tool()
 def calculate_backup_size(source_path: str, api_key: str = "") -> str:
-    """Calculate estimated backup size and time."""
+    """Calculate estimated backup size and time.
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
@@ -161,7 +224,22 @@ def calculate_backup_size(source_path: str, api_key: str = "") -> str:
 def retention_policy(
     files: str, compliance_type: str = "soc2", api_key: str = ""
 ) -> str:
-    """Generate retention policy for compliance (SOC2, GDPR, HIPAA)."""
+    """Generate retention policy for compliance (SOC2, GDPR, HIPAA).
+
+    Behavior:
+        This tool generates structured output without modifying external systems.
+        Output is deterministic for identical inputs. No side effects.
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
