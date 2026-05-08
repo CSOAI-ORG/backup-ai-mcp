@@ -1,45 +1,59 @@
-[![backup-ai-mcp MCP server](https://glama.ai/mcp/servers/CSOAI-ORG/backup-ai-mcp/badges/score.svg)](https://glama.ai/mcp/servers/CSOAI-ORG/backup-ai-mcp)
-[![MCP Registry](https://img.shields.io/badge/MCP_Registry-Published-green)](https://registry.modelcontextprotocol.io)
-[![PyPI](https://img.shields.io/pypi/v/backup-ai-mcp)](https://pypi.org/project/backup-ai-mcp/)
-
-[![backup-ai-mcp MCP server](https://glama.ai/mcp/servers/CSOAI-ORG/backup-ai-mcp/badges/card.svg)](https://glama.ai/mcp/servers/CSOAI-ORG/backup-ai-mcp)
-
 <div align="center">
 
-[![GitHub stars](https://img.shields.io/github/stars/CSOAI-ORG/backup-ai-mcp)](https://github.com/CSOAI-ORG/backup-ai-mcp/stargazers)
+# Backup Ai MCP
 
-# Backup Ai Mcp
+**MCP server for backup ai mcp operations**
 
-**Backup scheduling, verification, and retention policies with SOC2/GDPR/HIPAA compliance**
-
-[![npm version](https://img.shields.io/npm/v/@meok-ai/backup-ai-mcp)](https://www.npmjs.com/package/@meok-ai/backup-ai-mcp)
+[![PyPI](https://img.shields.io/pypi/v/meok-backup-ai-mcp)](https://pypi.org/project/meok-backup-ai-mcp/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![MEOK AI Labs](https://img.shields.io/badge/MEOK_AI_Labs-255+_servers-purple)](https://meok.ai)
-
-[Installation](#installation) · [Docs](https://csoai.org) · [Report Bug](https://github.com/CSOAI-ORG/backup-ai-mcp/issues)
+[![MEOK AI Labs](https://img.shields.io/badge/MEOK_AI_Labs-MCP_Server-purple)](https://meok.ai)
 
 </div>
 
----
+## Overview
+
+Backup Ai MCP provides AI-powered tools via the Model Context Protocol (MCP).
+
+## Tools
+
+| Tool | Description |
+|------|-------------|
+| `create_backup_plan` | Create a backup plan following 3-2-1 rule (3 copies, 2 media types, 1 offsite). |
+| `verify_backup` | Verify backup integrity using hash comparison. |
+| `list_backups` | List available backups in a directory. |
+| `calculate_backup_size` | Calculate estimated backup size and time. |
+| `retention_policy` | Generate retention policy for compliance (SOC2, GDPR, HIPAA). |
 
 ## Installation
 
 ```bash
-pip install backup-ai-mcp
-# or
-npm install -g @meok-ai/backup-ai-mcp
+pip install meok-backup-ai-mcp
 ```
 
-## Quick Start
+## Usage with Claude Desktop
 
-See the project repository for full documentation and examples.
+Add to your Claude Desktop MCP config (`claude_desktop_config.json`):
 
-## Enterprise Support
+```json
+{
+  "mcpServers": {
+    "backup-ai-mcp": {
+      "command": "python",
+      "args": ["-m", "meok_backup_ai_mcp.server"]
+    }
+  }
+}
+```
 
-- 📧 nicholas@csoai.org
-- 🌐 [CSOAI.org](https://csoai.org)
+## Usage with FastMCP
+
+```python
+from mcp.server.fastmcp import FastMCP
+
+# This server exposes 5 tool(s) via MCP
+# See server.py for full implementation
+```
 
 ## License
 
-MIT © [CSOAI](https://csoai.org)
-<!-- mcp-name: io.github.CSOAI-ORG/backup-ai-mcp -->
+MIT © [MEOK AI Labs](https://meok.ai)
