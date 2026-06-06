@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""Backup AI MCP — MEOK AI Labs. File backup scheduling, verification, retention policies."""
+"""
+Backup AI MCP — MEOK AI Labs. File backup scheduling, verification, retention policies."""
 
 import sys, os
 
-sys.path.insert(0, os.path.expanduser("~/clawd/meok-labs-engine/shared"))
 from auth_middleware import check_access
 
 import json, re, hashlib, shutil
@@ -82,7 +82,7 @@ def create_backup_plan(
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": "https://councilof.ai"}
 
     if err := _rl():
         return err
@@ -151,7 +151,7 @@ def verify_backup(backup_path: str, api_key: str = "") -> str:
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": "https://councilof.ai"}
 
     if err := _rl():
         return err
@@ -211,7 +211,7 @@ def list_backups(directory: str = "backup", api_key: str = "") -> str:
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": "https://councilof.ai"}
 
     if err := _rl():
         return err
@@ -274,7 +274,7 @@ def calculate_backup_size(source_path: str, api_key: str = "") -> str:
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": "https://councilof.ai"}
 
     if err := _rl():
         return err
@@ -341,7 +341,7 @@ def retention_policy(
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": "https://councilof.ai"}
 
     if err := _rl():
         return err
@@ -382,5 +382,8 @@ def retention_policy(
     }
 
 
-if __name__ == "__main__":
+def main():
     mcp.run()
+
+if __name__ == '__main__':
+    main()

@@ -1,0 +1,9 @@
+# backup-ai-mcp - Auto-trigger Rules
+
+When the user asks about backup, use backup-ai-mcp tools: create_backup_plan, verify_backup, list_backups, calculate_backup_size, retention_policy
+
+**MCP server for backup ai mcp operations**
+
+Install: `pip install backup-ai-mcp`
+
+By MEOK AI Labs — MIT licensed.

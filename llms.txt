@@ -1,0 +1,36 @@
+# backup-ai-mcp
+# **MCP server for backup ai mcp operations**
+
+## Install
+```bash
+pip install backup-ai-mcp
+```
+
+## Auth & Rate Limits
+- Free tier: 10 calls/day. No API key required.
+- Pro tier (£79/mo): unlimited + signed attestations.
+- Enterprise (£1,499/mo): white-label.
+
+## Tools
+
+### `create_backup_plan`
+Create a backup plan following 3-2-1 rule (3 copies, 2 media types, 1 offsite).
+
+### `verify_backup`
+Verify backup integrity using hash comparison.
+
+### `list_backups`
+List available backups in a directory.
+
+### `calculate_backup_size`
+Calculate estimated backup size and time.
+
+### `retention_policy`
+Generate retention policy for compliance (SOC2, GDPR, HIPAA).
+
+
+## Maintainer
+MEOK AI Labs · hello@meok.ai · https://meok.ai · MIT licensed
+
+## Pairs with
+Governance moat: pair this tool with any of MEOK's 38 governance MCPs (EU AI Act, DORA, NIS2, CRA, GDPR, ISO 42001, etc.) for full compliance coverage.

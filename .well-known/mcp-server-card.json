@@ -1,0 +1,28 @@
+{
+  "name": "backup-ai-mcp",
+  "title": "Backup Ai Mcp",
+  "description": "Backup Ai automation via MCP. Includes create backup plan, verify backup, list backups. By MEOK AI Labs.",
+  "version": "1.0.6",
+  "homepage": "https://meok.ai",
+  "license": "MIT",
+  "transport": {
+    "type": "stdio"
+  },
+  "tools": [
+    {
+      "name": "create_backup_plan"
+    },
+    {
+      "name": "verify_backup"
+    },
+    {
+      "name": "list_backups"
+    },
+    {
+      "name": "calculate_backup_size"
+    },
+    {
+      "name": "retention_policy"
+    }
+  ]
+}
