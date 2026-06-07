@@ -1,0 +1,68 @@
+{
+  "name": "backup-ai-mcp",
+  "description": "Backup Ai MCP Server by MEOK AI Labs",
+  "url": "https://proofof.ai/scorecard/backup-ai-mcp.html",
+  "version": "1.0.6",
+  "protocolVersion": "0.2.0",
+  "provider": {
+    "organization": "MEOK AI Labs",
+    "url": "https://meok.ai"
+  },
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false
+  },
+  "defaultInputModes": [
+    "text"
+  ],
+  "defaultOutputModes": [
+    "text"
+  ],
+  "skills": [
+    {
+      "id": "create_backup_plan",
+      "name": "Create Backup Plan",
+      "description": "create_backup_plan via backup-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "verify_backup",
+      "name": "Verify Backup",
+      "description": "verify_backup via backup-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "list_backups",
+      "name": "List Backups",
+      "description": "list_backups via backup-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "calculate_backup_size",
+      "name": "Calculate Backup Size",
+      "description": "calculate_backup_size via backup-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "retention_policy",
+      "name": "Retention Policy",
+      "description": "retention_policy via backup-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    }
+  ]
+}

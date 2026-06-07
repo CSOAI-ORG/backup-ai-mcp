@@ -1,0 +1,23 @@
+{
+  "acpVersion": "0.1",
+  "agent": {
+    "name": "backup-ai-mcp",
+    "description": "Backup Ai MCP Server by MEOK AI Labs",
+    "version": "1.0.6",
+    "provider": "MEOK AI Labs",
+    "interfaces": [
+      {
+        "type": "mcp",
+        "transport": "stdio",
+        "package": "backup-ai-mcp"
+      }
+    ],
+    "capabilities": [
+      "create_backup_plan",
+      "verify_backup",
+      "list_backups",
+      "calculate_backup_size",
+      "retention_policy"
+    ]
+  }
+}
