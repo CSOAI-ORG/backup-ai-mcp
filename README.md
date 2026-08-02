@@ -1,5 +1,6 @@
 <!-- mcp-name: io.github.CSOAI-ORG/backup-ai-mcp -->
 [![MCP Scorecard: 86/100](https://img.shields.io/badge/proofof.ai-86%2F100-5b21b6)](https://proofof.ai/scorecard/backup-ai-mcp.html)
+[![Available on CodeGuilds](https://img.shields.io/badge/Available_on-CodeGuilds-6366f1)](https://codeguilds.dev/packages/backup-ai-mcp)
 
 # Backup Ai MCP
 
